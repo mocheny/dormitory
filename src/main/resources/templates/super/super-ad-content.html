@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div role="tabpanel" class="tab-pane fade" id="AllDorms">
+    <br/>
+    <div class="row">
+        <!-- Single button -->
+        <div class="col-lg-3">
+            <div class="btn-group">
+                <button type="button" id="ad-db" class="btn btn-default dropdown-toggle btn-success"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    全部宿舍楼 <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu pre-scrollable" id="ad-db-menu">
+                    <li id="ad-db-num1" onclick='javascript:select("ad-db-num1","ad-db")'>
+                        <a href="javascript:void(0)">全部宿舍楼</a>
+                    </li>
+                    <li id="ad-db-num2" onclick='javascript:select("ad-db-num2","ad-db")'>
+                        <a href="javascript:void(0)">栎苑-1号楼</a>
+                    </li>
+                    <li id="ad-db-num3" onclick='javascript:select("ad-db-num3","ad-db")'>
+                        <a href="javascript:void(0)">栎苑-4号楼</a>
+                    </li>
+                    <li id="ad-db-num4" onclick='javascript:select("ad-db-num4","ad-db")'>
+                        <a href="javascript:void(0)">桔苑-1号楼</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for..." id="ad-search">
+                <span class="input-group-btn">
+					<button class="btn btn-default" type="button" id="ad-search-button"
+                            onclick="javascript:ad_load_search()">Go!</button>
+				</span>
+            </div>
+        </div>
+        <div class="col-lg-5">
+            <div style="float:right">
+                <button type="button" data-toggle="modal" data-target="#ad-insert" class="btn btn-primary btn-danger">
+                    添加新寝室 <span class="glyphicon glyphicon-plus"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    </br>
+    <div class="panel panel-default">
+
+        <div class="panel-heading">Information details</div>
+
+        <table class="table" id="ad-table">
+            <tr>
+                <th>宿舍楼名</th>
+                <th>寝室号</th>
+                <th>学生居住人数</th>
+                <th>剩余电费</th>
+                <th>剩余水费</th>
+                <th>#</th>
+            </tr>
+            <tr>
+                <td>栎苑-4号楼</td>
+                <td>206号</td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-success">修改</button>
+                    <button type="button" class="btn btn-primary btn-danger">删除</button>
+                </td>
+            </tr>
+            <tr>
+                <td>栎苑-4号楼</td>
+                <td>206号</td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-success">修改</button>
+                    <button type="button" class="btn btn-primary btn-danger">删除</button>
+                </td>
+            </tr>
+            <tr>
+                <td>栎苑-4号楼</td>
+                <td>206号</td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-success">修改</button>
+                    <button type="button" class="btn btn-primary btn-danger">删除</button>
+                </td>
+            </tr>
+            <tr>
+                <td>栎苑-4号楼</td>
+                <td>206号</td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-success">修改</button>
+                    <button type="button" class="btn btn-primary btn-danger">删除</button>
+                </td>
+            </tr>
+            <tr>
+                <td>栎苑-4号楼</td>
+                <td>206号</td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-success">修改</button>
+                    <button type="button" class="btn btn-primary btn-danger">删除</button>
+                </td>
+            </tr>
+            <tr>
+                <td>栎苑-4号楼</td>
+                <td>206号</td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-success">修改</button>
+                    <button type="button" class="btn btn-primary btn-danger">删除</button>
+                </td>
+            </tr>
+            <tr>
+                <td>栎苑-4号楼</td>
+                <td>206号</td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-success">修改</button>
+                    <button type="button" class="btn btn-primary btn-danger">删除</button>
+                </td>
+            </tr>
+            <tr>
+                <td>栎苑-4号楼</td>
+                <td>206号</td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-success">修改</button>
+                    <button type="button" class="btn btn-primary btn-danger">删除</button>
+                </td>
+            </tr>
+            <tr>
+                <td>栎苑-4号楼</td>
+                <td>206号</td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-success">修改</button>
+                    <button type="button" class="btn btn-primary btn-danger">删除</button>
+                </td>
+            </tr>
+            <tr>
+                <td>栎苑-4号楼</td>
+                <td>206号</td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-success">修改</button>
+                    <button type="button" class="btn btn-primary btn-danger">删除</button>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="row">
+        <div style="float: right">
+            <div>
+                当前第 <span id="ad-current">1</span> 页 总计 <span id="ad-pages">0</span> 页 共 <span id="ad-total">0</span>
+                条数据
+            </div>
+            <nav aria-label="Page navigation">
+                <ul class="pagination" id="ad-pagination">
+                    <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <form class="form-horizontal" role="form" id="ad-insert-form" style="margin: 20px;">
+        <div class="modal fade" id="ad-insert" tabindex="-1" role="dialog"
+             aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">新寝室信息</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">宿舍楼名</label>
+                                <div class="col-sm-9">
+                                    <!--
+                                    <input type="text" class="form-control" id="ad-content-dbname" name="dbname"
+                                           placeholder="请输入宿舍楼名...">
+                                           -->
+                                    <select name="dbname" id="ad-content-dbname" class="form-control"></select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">寝室名</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="ad-content-dname" name="dname"
+                                           placeholder="请输入寝室名...">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">可容纳人数</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="accNumber"
+                                           placeholder="请输入可容纳人数...">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">居住人数</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="studentNumber"
+                                           placeholder="请输入居住人数...">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">剩余电费</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="resElectricity"
+                                           placeholder="请输入剩余电费...">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">剩余水费</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="resWater" placeholder="请输入剩余水费...">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="submit" class="btn btn-primary" id="ad-insert-submit">提交</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div id="ad-other-modal"></div>
+</div>
+</body>
+</html>

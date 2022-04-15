@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div role="tabpanel" class="tab-pane fade" id="AllRepairInformation">
+    <br/>
+    <div class="row">
+        <!-- Single button -->
+        <div class="col-lg-3">
+            <div class="btn-group">
+                <button type="button" id="ari-db" class="btn btn-default dropdown-toggle btn-success"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    全部宿舍楼 <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu pre-scrollable" id="ari-db-menu">
+                    <li id="ari-db-num1" onclick='javascript:select("ari-db-num1","ari-db")'>
+                        <a href="javascript:void(0)">全部宿舍楼</a>
+                    </li>
+                    <li id="ari-db-num2" onclick='javascript:select("ari-db-num2","ari-db")'>
+                        <a href="javascript:void(0)">栎苑-1号楼</a>
+                    </li>
+                    <li id="ari-db-num3" onclick='javascript:select("ari-db-num3","ari-db")'>
+                        <a href="javascript:void(0)">栎苑-4号楼</a>
+                    </li>
+                    <li id="ari-db-num4" onclick='javascript:select("ari-db-num4","ari-db")'>
+                        <a href="javascript:void(0)">桔苑-1号楼</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for..." id="ari-search">
+                <span class="input-group-btn">
+					<button class="btn btn-default" type="button" id="ari-search-button"
+                            onclick="javascript:ari_load_search()">Go!</button>
+				</span>
+            </div>
+        </div>
+    </div>
+
+    </br>
+    <div class="panel panel-default">
+
+        <div class="panel-heading">Information details</div>
+
+        <table class="table" id="ari-table">
+            <tr>
+                <th>宿舍楼名</th>
+                <th>报修人姓名</th>
+                <th>报修人寝室名</th>
+                <th>报修人电话号码</th>
+                <th>报修原因</th>
+                <th>报修时间</th>
+                <th>#</th>
+            </tr>
+            <tr>
+                <td>栎苑-4号楼</td>
+                <td>李四</td>
+                <td>001号</td>
+                <td>13688888888</td>
+                <td>水龙头损坏</td>
+                <td>2021/10/20</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-success">修改</button>
+                    <button type="button" class="btn btn-primary btn-danger">删除</button>
+                </td>
+            </tr>
+            <tr>
+                <td>栎苑-4号楼</td>
+                <td>李四</td>
+                <td>001号</td>
+                <td>13688888888</td>
+                <td>水龙头损坏</td>
+                <td>2021/10/20</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-success">修改</button>
+                    <button type="button" class="btn btn-primary btn-danger">删除</button>
+                </td>
+            </tr>
+            <tr>
+                <td>栎苑-4号楼</td>
+                <td>李四</td>
+                <td>001号</td>
+                <td>13688888888</td>
+                <td>水龙头损坏</td>
+                <td>2021/10/20</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-success">修改</button>
+                    <button type="button" class="btn btn-primary btn-danger">删除</button>
+                </td>
+            </tr>
+            <tr>
+                <td>栎苑-4号楼</td>
+                <td>李四</td>
+                <td>001号</td>
+                <td>13688888888</td>
+                <td>水龙头损坏</td>
+                <td>2021/10/20</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-success">修改</button>
+                    <button type="button" class="btn btn-primary btn-danger">删除</button>
+                </td>
+            </tr>
+            <tr>
+                <td>栎苑-4号楼</td>
+                <td>李四</td>
+                <td>001号</td>
+                <td>13688888888</td>
+                <td>水龙头损坏</td>
+                <td>2021/10/20</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-success">修改</button>
+                    <button type="button" class="btn btn-primary btn-danger">删除</button>
+                </td>
+            </tr>
+            <tr>
+                <td>栎苑-4号楼</td>
+                <td>李四</td>
+                <td>001号</td>
+                <td>13688888888</td>
+                <td>水龙头损坏</td>
+                <td>2021/10/20</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-success">修改</button>
+                    <button type="button" class="btn btn-primary btn-danger">删除</button>
+                </td>
+            </tr>
+            <tr>
+                <td>栎苑-4号楼</td>
+                <td>李四</td>
+                <td>001号</td>
+                <td>13688888888</td>
+                <td>水龙头损坏</td>
+                <td>2021/10/20</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-success">修改</button>
+                    <button type="button" class="btn btn-primary btn-danger">删除</button>
+                </td>
+            </tr>
+            <tr>
+                <td>栎苑-4号楼</td>
+                <td>李四</td>
+                <td>001号</td>
+                <td>13688888888</td>
+                <td>水龙头损坏</td>
+                <td>2021/10/20</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-success">修改</button>
+                    <button type="button" class="btn btn-primary btn-danger">删除</button>
+                </td>
+            </tr>
+            <tr>
+                <td>栎苑-4号楼</td>
+                <td>李四</td>
+                <td>001号</td>
+                <td>13688888888</td>
+                <td>水龙头损坏</td>
+                <td>2021/10/20</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-success">修改</button>
+                    <button type="button" class="btn btn-primary btn-danger">删除</button>
+                </td>
+            </tr>
+            <tr>
+                <td>栎苑-4号楼</td>
+                <td>李四</td>
+                <td>001号</td>
+                <td>13688888888</td>
+                <td>水龙头损坏</td>
+                <td>2021/10/20</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-success">修改</button>
+                    <button type="button" class="btn btn-primary btn-danger">删除</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="row">
+        <div style="float: right">
+            <div>
+                当前第 <span id="ari-current">1</span> 页 总计 <span id="ari-pages">0</span> 页 共 <span id="ari-total">0</span>
+                条数据
+            </div>
+            <nav aria-label="Page navigation">
+                <ul class="pagination" id="ari-pagination">
+                    <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div id="ari-other-modal"></div>
+
+</div>
+</body>
+</html>
