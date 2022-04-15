@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>修改</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" th:href="@{/assets/images/favicon.png}" type="image/png" >
+    <link th:href="@{/assets/css/icons.css}" rel="stylesheet">
+    <link th:href="@{/assets/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/assets/css/style.css}" rel="stylesheet" >
+    <link th:href="@{/assets/css/responsive.css}" rel="stylesheet" >
+
+</head>
+
+
+
+
+
+
+
+<body class="sticky-header">
+
+
+
+<!--Start left side Menu-->
+<div class="left-side sticky-left-side">
+
+    <!--logo-->
+    <div class="logo">
+        <h2><font color="#faebd7" >宿舍管理系统</font></h2>
+    </div>
+
+
+    <!--logo-->
+
+    <div class="left-side-inner">
+        <!--Sidebar nav-->
+        <ul class="nav nav-pills nav-stacked custom-nav">
+            <li class="menu-list"><a th:href="@{/allStu}"><i class="icon-home"></i> <span>管理</span></a>
+                <ul class="sub-menu-list">
+                    <li class="active"><a th:href="@{/allStu}"> 学生管理</a></li>
+                    <li><a th:href="@{/allDor}">宿舍管理</a></li>
+                </ul>
+            </li>
+
+
+            <li  ><a ><i class="icon-note"></i> <span>Calendar</span></a></li>
+            <li ><a ><i class="icon-note"></i> <span>Calendar</span></a></li>
+            <li><a ><i class="icon-wrench"></i> <span>Widget</span></a></li>
+
+
+        </ul>
+        <!--End sidebar nav-->
+
+    </div>
+</div>
+<!--End left side menu-->
+
+
+
+<!-- main content start-->
+<div class="main-content" >
+
+
+    <!--body wrapper start-->
+    <div class="wrapper">
+
+        <!--Start Page Title-->
+        <div class="page-title-box">
+            <h4 class="page-title">学生管理</h4>
+            <ol class="breadcrumb">
+                <li>
+                    <a th:href="@{/function}" >管理</a>
+                </li>
+
+                <li class="active">
+                    学生管理
+                </li>
+            </ol>
+            <div class="clearfix"></div>
+        </div>
+        <!--End Page Title-->
+
+
+
+        <!-- Start row-->
+        <div class="row">
+
+
+
+
+            <div class="col-md-12">
+
+                <div class="white-box">
+                    <div class="kk">
+                        <form th:action="@{/addStu}" >
+                            <input type = "submit" value="添加新学生">
+
+                        </form>
+                    </div>
+                    <div class="table-wrap">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>学号</th>
+                                <th>姓名</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+
+                            <tr th:each="employee : ${employeeList}">
+                                <td th:text="${employee.id}"></td>
+                                <td th:text="${employee.name}"></td>
+                                <td><a th:href="@{'/stu/' + ${employee.id}}">查看详情</a></td>
+                            </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- End row-->
+
+
+
+</div>
+<!-- End Wrapper-->
+
+
+<!--Start  Footer -->
+<footer class="footer-main"></footer>
+<!--End footer -->
+
+</div>
+<!--End main content -->
+
+
+
+<!--Begin core plugin -->
+<script th:src="@{/assets/js/jquery.min.js}"></script>
+<script th:src="@{/assets/js/bootstrap.min.js}"></script>
+<script th:src="@{/assets/plugins/moment/moment.js}"></script>
+<script  th:src="@{/assets/js/jquery.slimscroll.js}"></script>
+<script th:src="@{/assets/js/jquery.nicescroll.js}"></script>
+<script th:src="@{/assets/js/functions.js}"></script>
+<!-- End core plugin -->
+
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script type="text/javascript" th:src="@{/assets/plugins/jquery-ui/jquery-ui.min.js}"></script>
+<script type="text/javascript" th:src="@{/assets/plugins/moment/moment.js}"></script>
+<script type="text/javascript" th:src="@{/assets/plugins/full-calendar/fullcalendar.js}"></script>
+<script type="text/javascript" th:src="@{/assets/pages/calendar-custom.js}"></script>
+<!-- END PAGE LEVEL SCRIPTS -->
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<body>
+
+<form th:action="@{/modDor}" method="post">
+    <input type="hidden" name="_method" value="put">
+    <input type="hidden" name="id" th:value="${employee.id}">
+    S2:<input type="text" name="S1" th:value="${employee.s1}">
+    <br>
+    S2:<input type="text" name="S2" th:value="${employee.s2}"><br>
+    <br>
+    S3:<input type="text" name="S3" th:value="${employee.s3}"><br>
+    <br>
+    S4:<input type="text" name="S4" th:value="${employee.s4}"><br>
+    <br>
+    <input type="submit" value="修改"><br>
+</form>
+
+</body>
+</html>

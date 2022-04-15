@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>宿舍管理</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" th:href="@{/assets/images/favicon.png}" type="image/png" >
+    <link th:href="@{/assets/css/icons.css}" rel="stylesheet">
+    <link th:href="@{/assets/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/assets/css/style.css}" rel="stylesheet" >
+    <link th:href="@{/assets/css/responsive.css}" rel="stylesheet" >
+
+
+
+    <style  type="text/css">
+        .kk{
+            position:relative;
+            left:1035px;
+        }
+        .qw{
+            position:relative;
+            left:1050px;
+            top:-30px;
+        }
+    </style>
+
+</head>
+
+
+
+
+
+<body class="sticky-header">
+
+
+
+<!--Start left side Menu-->
+<div class="left-side sticky-left-side">
+
+    <!--logo-->
+    <div class="logo">
+        <h2><font color="#faebd7" >宿舍管理系统</font></h2>
+    </div>
+
+
+    <!--logo-->
+
+    <div class="left-side-inner">
+        <!--Sidebar nav-->
+        <ul class="nav nav-pills nav-stacked custom-nav">
+            <li class="menu-list"><a th:href="@{/allStu}"><i class="icon-home"></i> <span>管理</span></a>
+                <ul class="sub-menu-list">
+                    <li class="active"><a th:href="@{/allStu}"> 学生管理</a></li>
+                    <li><a th:href="@{/allDor}">宿舍管理</a></li>
+                </ul>
+            </li>
+
+
+
+
+        </ul>
+        <!--End sidebar nav-->
+
+    </div>
+</div>
+<!--End left side menu-->
+
+
+
+<!-- main content start-->
+<div class="main-content" >
+
+
+    <!--body wrapper start-->
+    <div class="wrapper">
+        <div class = "qw">
+            <button>  <a th:href="@{/}">退出</a></button>
+        </div>
+        <!--Start Page Title-->
+        <div class="page-title-box">
+            <h4 class="page-title">宿舍详情</h4>
+            <ol class="breadcrumb">
+                <li>
+                    <a th:href="@{/function}" >管理</a>
+                </li>
+
+                <li >
+                    <a th:href="@{/allDor}" >宿舍管理</a>
+                </li>
+                <li class="active">
+                    宿舍详情
+                </li>
+            </ol>
+            <div class="clearfix"></div>
+        </div>
+        <!--End Page Title-->
+
+
+
+        <!-- Start row-->
+        <div class="row">
+
+
+
+
+            <div class="col-md-12">
+
+                <div class="white-box">
+
+                    <div class="kk">
+                        <form th:action="@{/allDor}" >
+                            <input type = "submit" value="返回">
+
+                        </form>
+                    </div>
+
+                    <div class="table-wrap">
+                        <table class="table table-striped">
+
+                            <tr th:each="employee : ${em}">
+                                <td>宿舍楼</td>
+                                <td th:text="${employee.lou}"></td>
+                                <td></td>
+                            </tr>
+
+                        <tr th:each="employee : ${em}">
+                            <td>宿舍号</td>
+                            <td th:text="${employee.id}"></td>
+                            <td></td>
+                        </tr>
+
+                        <tr th:each="employee : ${em}">
+                            <td>男/女</td>
+                            <td th:text="${employee.sex}"></td>
+                            <td></td>
+                        </tr>
+
+                        <tr th:each="employee : ${em}">
+                            <td>剩余空位</td>
+                            <td th:text="${employee.num}"></td>
+                            <td></td>
+                        </tr>
+
+                        <tr th:each="employee : ${em}">
+                            <td>学生1</td>
+                            <td th:text="${employee.s1}"></td>
+                            <td><a th:href="@{'/stu/' + ${employee.s1}}">查看详情</a></td>
+                        </tr>
+
+                        <tr th:each="employee : ${em}">
+                            <td>学生2</td>
+                            <td th:text="${employee.s2}"></td>
+                            <td><a th:href="@{'/stu/' + ${employee.s2}}">查看详情</a></td>
+                        </tr>
+
+
+                        <tr th:each="employee : ${em}">
+                            <td>学生3</td>
+                            <td th:text="${employee.s3}"></td>
+                            <td><a th:href="@{'/stu/' + ${employee.s3}}">查看详情</a></td>
+                        </tr>
+
+
+                        <tr th:each="employee : ${em}">
+                            <td>学生4</td>
+                            <td th:text="${employee.s4}"></td>
+                            <td><a th:href="@{'/stu/' + ${employee.s4}}">查看详情</a></td>
+                        </tr>
+
+
+                        <!--
+                        <tr th:each="employee : ${em}">
+                            <td><a th:href="@{'/modDor/' + ${employee.id}}">修改</a></td>
+                        </tr>
+                    -->
+                    </table>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- End row-->
+
+
+
+</div>
+<!-- End Wrapper-->
+
+
+<!--Start  Footer -->
+<footer class="footer-main"></footer>
+<!--End footer -->
+
+</div>
+<!--End main content -->
+
+
+
+<!--Begin core plugin -->
+<script th:src="@{/assets/js/jquery.min.js}"></script>
+<script th:src="@{/assets/js/bootstrap.min.js}"></script>
+<script th:src="@{/assets/plugins/moment/moment.js}"></script>
+<script  th:src="@{/assets/js/jquery.slimscroll.js}"></script>
+<script th:src="@{/assets/js/jquery.nicescroll.js}"></script>
+<script th:src="@{/assets/js/functions.js}"></script>
+<!-- End core plugin -->
+
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script type="text/javascript" th:src="@{/assets/plugins/jquery-ui/jquery-ui.min.js}"></script>
+<script type="text/javascript" th:src="@{/assets/plugins/moment/moment.js}"></script>
+<script type="text/javascript" th:src="@{/assets/plugins/full-calendar/fullcalendar.js}"></script>
+<script type="text/javascript" th:src="@{/assets/pages/calendar-custom.js}"></script>
+<!-- END PAGE LEVEL SCRIPTS -->
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

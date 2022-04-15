@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>添加学生</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" th:href="@{/assets/images/favicon.png}" type="image/png" >
+    <link th:href="@{/assets/css/icons.css}" rel="stylesheet">
+    <link th:href="@{/assets/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/assets/css/style.css}" rel="stylesheet" >
+    <link th:href="@{/assets/css/responsive.css}" rel="stylesheet" >
+
+
+
+    <style  type="text/css">
+        .kk{
+            position:relative;
+            left:1035px;
+        }
+        .qw{
+            position:relative;
+            left:1050px;
+            top:-30px;
+        }
+    </style>
+
+</head>
+
+
+
+
+
+<body class="sticky-header">
+
+
+
+<!--Start left side Menu-->
+<div class="left-side sticky-left-side">
+
+    <!--logo-->
+    <div class="logo">
+        <h2><font color="#faebd7" >宿舍管理系统</font></h2>
+    </div>
+
+
+    <!--logo-->
+
+    <div class="left-side-inner">
+        <!--Sidebar nav-->
+        <ul class="nav nav-pills nav-stacked custom-nav">
+
+
+            <li><a th:href="@{/allmana}"><i class="icon-note"></i> <span>管理员</span></a></li>
+
+
+
+
+
+        </ul>
+        <!--End sidebar nav-->
+
+    </div>
+</div>
+<!--End left side menu-->
+
+
+
+<!-- main content start-->
+<div class="main-content" >
+
+
+    <!--body wrapper start-->
+    <div class="wrapper">
+        <div class = "qw">
+            <button>  <a th:href="@{/}">退出</a></button>
+        </div>
+        <!--Start Page Title-->
+        <div class="page-title-box">
+            <h4 class="page-title">添加管理员</h4>
+
+            <div class="clearfix"></div>
+        </div>
+        <!--End Page Title-->
+
+
+
+        <!-- Start row-->
+        <div class="row">
+
+
+
+
+            <div class="col-md-12">
+
+                <div class="white-box">
+                    <div class="kk">
+                        <form th:action="@{/allmana}" >
+                            <input type = "submit" value="返回">
+
+                        </form>
+                    </div>
+
+
+                    <form  th:action="@{/addMana2}" method="post"  >
+                        Id:<input type="text" name="Id"><br>
+                        Password:<input type="text" name="Password"><br>
+
+                        <input type="submit" value = "添加">
+                    </form>
+
+
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- End row-->
+
+
+
+</div>
+<!-- End Wrapper-->
+
+
+<!--Start  Footer -->
+<footer class="footer-main"></footer>
+<!--End footer -->
+
+</div>
+<!--End main content -->
+
+
+
+<!--Begin core plugin -->
+<script th:src="@{/assets/js/jquery.min.js}"></script>
+<script th:src="@{/assets/js/bootstrap.min.js}"></script>
+<script th:src="@{/assets/plugins/moment/moment.js}"></script>
+<script  th:src="@{/assets/js/jquery.slimscroll.js}"></script>
+<script th:src="@{/assets/js/jquery.nicescroll.js}"></script>
+<script th:src="@{/assets/js/functions.js}"></script>
+<!-- End core plugin -->
+
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script type="text/javascript" th:src="@{/assets/plugins/jquery-ui/jquery-ui.min.js}"></script>
+<script type="text/javascript" th:src="@{/assets/plugins/moment/moment.js}"></script>
+<script type="text/javascript" th:src="@{/assets/plugins/full-calendar/fullcalendar.js}"></script>
+<script type="text/javascript" th:src="@{/assets/pages/calendar-custom.js}"></script>
+<!-- END PAGE LEVEL SCRIPTS -->
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

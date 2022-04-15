@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>学生宿舍管理系统</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/login.css}">
+
+    <style  type="text/css">
+    .lk{
+        position:relative;
+        left:125px;
+        top:10px;
+    }
+
+    #we{
+        position: absolute;
+        left:450px;
+        top:200px;
+    }
+    a{text-decoration:none}
+</style>
+
+</head>
+
+<body >
+<div class="login-box"  id = "we">
+    <div class="title">
+        <span>欢迎登录宿舍管理系统</span>
+    </div>
+    <div class="login-inner">
+        <!--
+        <form id="loginForm" action="" method="post" accept-charset="utf-8">
+            <input type="hidden" name="action" value="login"/>
+            <label>
+                <input name="username" type="text" placeholder="请输入账号" autocomplete="off">
+            </label>
+            <label>
+                <input name="password" type="text" placeholder="请输入密码" autocomplete="off">
+            </label>
+
+
+            <div class="submit_btn">
+                <button type="button" id="1">登录</button>
+            </div>
+
+        </form>
+-->
+
+<div class="lk">
+        <a th:href="@{/superlogin2}" style="color: black">超管登录</a>
+        <br><br>
+        <a th:href="@{/login2}" style="color: black">管理员登录</a>
+        <br><br>
+        <a th:href="@{/stulogin2}" style="color: black">学生登录</a>
+
+
+</div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!--
+待做工作：
+
+
+没解决：
+1.更新后浏览器显示中文时会有问题   (未解决！！！！！)
+
+
+
+ 分页显示
+-->
+
+
+<!--
+
+管理 ：学生
+index.html      宿舍
+晚归记录
+公告
+来访人员
+维修
+
+
+
+
+
+
+
+
+
+加一个退出，直接到首页
+
+注册后再登录时表单中数据保留  springmvc 62 之前的功能也有
+提高：
+1.页面设计
+3.登录功能
+4.管理员，学生
+
+
+
+在科研立项里面的功能，数据库中不加
+添加晚归记录，个人和晚归表
+来访人员记录
+信息公告栏
+维修登记
+
+只做搜索和分页，然后添加一个晚归，之后就写页面设计
+不做了 md
+
+先不加vue，用ajax，jquery实现看看
+
+（1）
+只在学生里面添加
+搜索功能：1.在controller里面查找
+        3.javaweb教程 253--256
+
+
+        先做这个：
+        select  先只能通过查询id,可以通过controller查询，在前端通过
+        表单传过去一个id
+        好像做不出来，数据传不了？？？？？？？？？？？？？？
+        input是post，转换页面是get，转换？？？
+        就是将input中的数据提取出来，然后传递给servlet   好像还是不行
+
+
+
+
+
+（3）
+分页显示：1.javaweb教程   244--252
+
+
+
+(2)之后再加
+排序：
+    2.web教程
+
+写完这三个功能，在看看界面设计
+
+先用springmvc中的控制器写出来，再加上ajax界面中动态判断
+
+
+注册后再登录时表单中数据保留  springmvc 62 之前的功能也有
+
+
+
+加一个退出功能
+
+教程：
+springmvc
+vue
+javaweb
+
+-->

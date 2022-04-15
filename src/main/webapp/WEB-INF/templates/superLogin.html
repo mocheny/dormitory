@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/login.css}">
+    <title>宿舍管理系统</title>
+
+
+    <style  type="text/css">
+        .lk{
+            position:relative;
+            left:50px;
+            top:10px;
+        }
+
+        #we{
+            position: absolute;
+            left:450px;
+            top:200px;
+        }
+        a{text-decoration:none}
+    </style>
+</head>
+
+
+<body>
+<div class="login-box" id = "we">
+    <div class="title">
+        <span>欢迎登录宿舍管理系统</span>
+    </div>
+    <div class="login-inner">
+        <!--
+        <form id="loginForm" action="" method="post" accept-charset="utf-8">
+            <input type="hidden" name="action" value="login"/>
+            <label>
+                <input name="username" type="text" placeholder="请输入账号" autocomplete="off">
+            </label>
+            <label>
+                <input name="password" type="text" placeholder="请输入密码" autocomplete="off">
+            </label>
+
+
+            <div class="submit_btn">
+                <button type="button" id="1">登录</button>
+            </div>
+
+        </form>
+-->
+        <div class="lk">
+        <form th:action="@{/superlogin}" method="post">
+            <input type = "text" placeholder="请输入账号" autocomplete="off" name = "account"><br>
+            <input type = "text" placeholder="请输入密码" autocomplete="off" name = "password"><br><br>
+            &nbsp;
+            <input type="submit" value = "登录">
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <button>  <a th:href="@{/}">取消</a></button>
+        </form>
+
+
+
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
